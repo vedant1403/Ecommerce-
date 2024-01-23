@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+  details Page 
+{% endblock %}
+{% block body %}
+<center>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{products.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Name:{{products.product_name}}</h5>
+          <p class="card-text">Description:{{products.description}}<br>
+            Price:{{products.price}}
+
+          </p>
+          
+          <form method="post">
+           <a href="/Addcart/{{products.wid}}"> <input type="button" value="cart" class="btn btn-primary"></a>
+           <a href="/"> <input type="button" value="back" class="btn btn-primary"></a>
+           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+
+
+{% endblock %}
